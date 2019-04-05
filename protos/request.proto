@@ -1,0 +1,64 @@
+syntax="proto3";
+
+package trajectoryServer;
+
+/*======================================*/
+/* start Objects for the drone request    */
+/*======================================*/
+message Request {
+    string id = 1;
+    string name = 2;
+    repeated Drone drones = 3;
+}
+
+message Drone {
+    string id = 1;
+    string name = 2;
+}
+/*======================================*/
+/* end Objects for the drone request    */
+/*======================================*/
+
+/*======================================*/
+/* start Objects for the drone request  */
+/*======================================*/
+message GetAllRequest {}
+
+message GetByDroneIdRequest {
+    string droneId = 1;
+}
+
+message DroneRequest {
+    Drone drone = 1;
+}
+
+message DroneResponse {
+    Drone drone = 1;
+}
+
+message SendDroneRequest {
+    Drone drone = 1;
+}
+
+message SendDroneResponse {
+    bool isOk = 1;
+}
+/*======================================*/
+/* end Objects for the drone request    */
+/*======================================*/
+
+
+/*======================================*/
+/* start service for the drone request  */
+/*======================================*/
+service DroneService {
+    rpc GetByDroneId (GetByDroneIdRequest) returns (DroneResponse);
+    rpc GetAll (GetAllRequest) returns (stream DroneResponse);
+    rpc Save (DroneRequest) returns (DroneResponse);
+    rpc SaveAll (stream DroneRequest) returns (stream DroneResponse);
+    rpc Send (SendDroneRequest) returns (SendDroneResponse);
+    rpc SendAll (stream SendDroneRequest) returns (stream SendDroneResponse);
+}
+/*======================================*/
+/* end service for the drone request  */
+/*======================================*/
