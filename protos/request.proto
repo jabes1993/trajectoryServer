@@ -11,6 +11,10 @@ message Request {
     repeated Drone drones = 3;
 }
 
+message Response{
+    string message = 1;
+}
+
 message Drone {
     string id = 1;
     string name = 2;
@@ -43,6 +47,7 @@ message SendDroneRequest {
 message SendDroneResponse {
     bool isOk = 1;
 }
+
 /*======================================*/
 /* end Objects for the drone request    */
 /*======================================*/
@@ -58,6 +63,8 @@ service DroneService {
     rpc SaveAll (stream DroneRequest) returns (stream DroneResponse);
     rpc Send (SendDroneRequest) returns (SendDroneResponse);
     rpc SendAll (stream SendDroneRequest) returns (stream SendDroneResponse);
+    rpc SendRequest (Request) returns (Response);
+    rpc SendAllRequest (stream Request) returns (stream Response);
 }
 /*======================================*/
 /* end service for the drone request  */
