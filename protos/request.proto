@@ -6,9 +6,9 @@ package trajectoryServer;
 /* start Objects for the drone request    */
 /*======================================*/
 message Request {
-    string id = 1;
+    // string id = 1;
     string name = 2;
-    repeated Drone drones = 3;
+    // repeated Drone drones = 3;
 }
 
 message Response{

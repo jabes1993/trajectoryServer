@@ -24,35 +24,34 @@ namespace TrajectoryServer {
     static RequestReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg1yZXF1ZXN0LnByb3RvEhB0cmFqZWN0b3J5U2VydmVyIkwKB1JlcXVlc3QS",
-            "CgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRInCgZkcm9uZXMYAyADKAsyFy50",
-            "cmFqZWN0b3J5U2VydmVyLkRyb25lIhsKCFJlc3BvbnNlEg8KB21lc3NhZ2UY",
-            "ASABKAkiIQoFRHJvbmUSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCSIPCg1H",
-            "ZXRBbGxSZXF1ZXN0IiYKE0dldEJ5RHJvbmVJZFJlcXVlc3QSDwoHZHJvbmVJ",
-            "ZBgBIAEoCSI2CgxEcm9uZVJlcXVlc3QSJgoFZHJvbmUYASABKAsyFy50cmFq",
-            "ZWN0b3J5U2VydmVyLkRyb25lIjcKDURyb25lUmVzcG9uc2USJgoFZHJvbmUY",
-            "ASABKAsyFy50cmFqZWN0b3J5U2VydmVyLkRyb25lIjoKEFNlbmREcm9uZVJl",
-            "cXVlc3QSJgoFZHJvbmUYASABKAsyFy50cmFqZWN0b3J5U2VydmVyLkRyb25l",
-            "IiEKEVNlbmREcm9uZVJlc3BvbnNlEgwKBGlzT2sYASABKAgyiQUKDERyb25l",
-            "U2VydmljZRJWCgxHZXRCeURyb25lSWQSJS50cmFqZWN0b3J5U2VydmVyLkdl",
-            "dEJ5RHJvbmVJZFJlcXVlc3QaHy50cmFqZWN0b3J5U2VydmVyLkRyb25lUmVz",
-            "cG9uc2USTAoGR2V0QWxsEh8udHJhamVjdG9yeVNlcnZlci5HZXRBbGxSZXF1",
-            "ZXN0Gh8udHJhamVjdG9yeVNlcnZlci5Ecm9uZVJlc3BvbnNlMAESRwoEU2F2",
-            "ZRIeLnRyYWplY3RvcnlTZXJ2ZXIuRHJvbmVSZXF1ZXN0Gh8udHJhamVjdG9y",
-            "eVNlcnZlci5Ecm9uZVJlc3BvbnNlEk4KB1NhdmVBbGwSHi50cmFqZWN0b3J5",
-            "U2VydmVyLkRyb25lUmVxdWVzdBofLnRyYWplY3RvcnlTZXJ2ZXIuRHJvbmVS",
-            "ZXNwb25zZSgBMAESTwoEU2VuZBIiLnRyYWplY3RvcnlTZXJ2ZXIuU2VuZERy",
-            "b25lUmVxdWVzdBojLnRyYWplY3RvcnlTZXJ2ZXIuU2VuZERyb25lUmVzcG9u",
-            "c2USVgoHU2VuZEFsbBIiLnRyYWplY3RvcnlTZXJ2ZXIuU2VuZERyb25lUmVx",
-            "dWVzdBojLnRyYWplY3RvcnlTZXJ2ZXIuU2VuZERyb25lUmVzcG9uc2UoATAB",
-            "EkQKC1NlbmRSZXF1ZXN0EhkudHJhamVjdG9yeVNlcnZlci5SZXF1ZXN0Ghou",
-            "dHJhamVjdG9yeVNlcnZlci5SZXNwb25zZRJLCg5TZW5kQWxsUmVxdWVzdBIZ",
-            "LnRyYWplY3RvcnlTZXJ2ZXIuUmVxdWVzdBoaLnRyYWplY3RvcnlTZXJ2ZXIu",
-            "UmVzcG9uc2UoATABYgZwcm90bzM="));
+            "Cg1yZXF1ZXN0LnByb3RvEhB0cmFqZWN0b3J5U2VydmVyIhcKB1JlcXVlc3QS",
+            "DAoEbmFtZRgCIAEoCSIbCghSZXNwb25zZRIPCgdtZXNzYWdlGAEgASgJIiEK",
+            "BURyb25lEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkiDwoNR2V0QWxsUmVx",
+            "dWVzdCImChNHZXRCeURyb25lSWRSZXF1ZXN0Eg8KB2Ryb25lSWQYASABKAki",
+            "NgoMRHJvbmVSZXF1ZXN0EiYKBWRyb25lGAEgASgLMhcudHJhamVjdG9yeVNl",
+            "cnZlci5Ecm9uZSI3Cg1Ecm9uZVJlc3BvbnNlEiYKBWRyb25lGAEgASgLMhcu",
+            "dHJhamVjdG9yeVNlcnZlci5Ecm9uZSI6ChBTZW5kRHJvbmVSZXF1ZXN0EiYK",
+            "BWRyb25lGAEgASgLMhcudHJhamVjdG9yeVNlcnZlci5Ecm9uZSIhChFTZW5k",
+            "RHJvbmVSZXNwb25zZRIMCgRpc09rGAEgASgIMokFCgxEcm9uZVNlcnZpY2US",
+            "VgoMR2V0QnlEcm9uZUlkEiUudHJhamVjdG9yeVNlcnZlci5HZXRCeURyb25l",
+            "SWRSZXF1ZXN0Gh8udHJhamVjdG9yeVNlcnZlci5Ecm9uZVJlc3BvbnNlEkwK",
+            "BkdldEFsbBIfLnRyYWplY3RvcnlTZXJ2ZXIuR2V0QWxsUmVxdWVzdBofLnRy",
+            "YWplY3RvcnlTZXJ2ZXIuRHJvbmVSZXNwb25zZTABEkcKBFNhdmUSHi50cmFq",
+            "ZWN0b3J5U2VydmVyLkRyb25lUmVxdWVzdBofLnRyYWplY3RvcnlTZXJ2ZXIu",
+            "RHJvbmVSZXNwb25zZRJOCgdTYXZlQWxsEh4udHJhamVjdG9yeVNlcnZlci5E",
+            "cm9uZVJlcXVlc3QaHy50cmFqZWN0b3J5U2VydmVyLkRyb25lUmVzcG9uc2Uo",
+            "ATABEk8KBFNlbmQSIi50cmFqZWN0b3J5U2VydmVyLlNlbmREcm9uZVJlcXVl",
+            "c3QaIy50cmFqZWN0b3J5U2VydmVyLlNlbmREcm9uZVJlc3BvbnNlElYKB1Nl",
+            "bmRBbGwSIi50cmFqZWN0b3J5U2VydmVyLlNlbmREcm9uZVJlcXVlc3QaIy50",
+            "cmFqZWN0b3J5U2VydmVyLlNlbmREcm9uZVJlc3BvbnNlKAEwARJECgtTZW5k",
+            "UmVxdWVzdBIZLnRyYWplY3RvcnlTZXJ2ZXIuUmVxdWVzdBoaLnRyYWplY3Rv",
+            "cnlTZXJ2ZXIuUmVzcG9uc2USSwoOU2VuZEFsbFJlcXVlc3QSGS50cmFqZWN0",
+            "b3J5U2VydmVyLlJlcXVlc3QaGi50cmFqZWN0b3J5U2VydmVyLlJlc3BvbnNl",
+            "KAEwAWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::TrajectoryServer.Request), global::TrajectoryServer.Request.Parser, new[]{ "Id", "Name", "Drones" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrajectoryServer.Request), global::TrajectoryServer.Request.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TrajectoryServer.Response), global::TrajectoryServer.Response.Parser, new[]{ "Message" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TrajectoryServer.Drone), global::TrajectoryServer.Drone.Parser, new[]{ "Id", "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TrajectoryServer.GetAllRequest), global::TrajectoryServer.GetAllRequest.Parser, null, null, null, null),
@@ -95,9 +94,7 @@ namespace TrajectoryServer {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Request(Request other) : this() {
-      id_ = other.id_;
       name_ = other.name_;
-      drones_ = other.drones_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -106,36 +103,18 @@ namespace TrajectoryServer {
       return new Request(this);
     }
 
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 1;
-    private string id_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Id {
-      get { return id_; }
-      set {
-        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 2;
     private string name_ = "";
+    /// <summary>
+    /// string id = 1;
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
       get { return name_; }
       set {
         name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
-    }
-
-    /// <summary>Field number for the "drones" field.</summary>
-    public const int DronesFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::TrajectoryServer.Drone> _repeated_drones_codec
-        = pb::FieldCodec.ForMessage(26, global::TrajectoryServer.Drone.Parser);
-    private readonly pbc::RepeatedField<global::TrajectoryServer.Drone> drones_ = new pbc::RepeatedField<global::TrajectoryServer.Drone>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::TrajectoryServer.Drone> Drones {
-      get { return drones_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -151,18 +130,14 @@ namespace TrajectoryServer {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Id != other.Id) return false;
       if (Name != other.Name) return false;
-      if(!drones_.Equals(other.drones_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      hash ^= drones_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -176,15 +151,10 @@ namespace TrajectoryServer {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Id.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Id);
-      }
       if (Name.Length != 0) {
         output.WriteRawTag(18);
         output.WriteString(Name);
       }
-      drones_.WriteTo(output, _repeated_drones_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -193,13 +163,9 @@ namespace TrajectoryServer {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Id.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
-      }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      size += drones_.CalculateSize(_repeated_drones_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -211,13 +177,9 @@ namespace TrajectoryServer {
       if (other == null) {
         return;
       }
-      if (other.Id.Length != 0) {
-        Id = other.Id;
-      }
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      drones_.Add(other.drones_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -229,16 +191,8 @@ namespace TrajectoryServer {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            Id = input.ReadString();
-            break;
-          }
           case 18: {
             Name = input.ReadString();
-            break;
-          }
-          case 26: {
-            drones_.AddEntriesFrom(input, _repeated_drones_codec);
             break;
           }
         }
