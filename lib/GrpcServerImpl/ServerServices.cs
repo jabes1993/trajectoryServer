@@ -13,11 +13,11 @@ namespace TrajectoryServer.lib.GrpcServerImpl
             var server = new Server
             {
                 Services = { DroneService.BindService(new ResponseImpl())},
-                Ports = { new ServerPort(Constant.Host, Constant.Port, ServerCredentials.Insecure) }
+                Ports = { new ServerPort(Environment.GetEnvironmentVariable("Host"), Int32.Parse(Environment.GetEnvironmentVariable("Port")), ServerCredentials.Insecure) }
             };
             server.Start();
 
-            Console.WriteLine($"server listening on port = {Constant.Port}");
+            Console.WriteLine($"server listening on port = {Environment.GetEnvironmentVariable("Port")}");
             Console.WriteLine("Press any key to stop the server");
             Console.ReadKey();
 
